@@ -1,0 +1,79 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 2rem;
+    color: black;
+    /* background-color: white; */
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center; /* Aligns the logo and text vertically */
+    cursor: pointer; /* If the logo or text is a link */
+  }
+  
+  .navbar-logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .navbar-logo-text {
+    margin-left: 1px; /* Space between logo and text */
+    font-size: 1.5rem; /* Text size */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Aligns the links on the same axis */
+    text-decoration: none; /* Ensure no underline appears */
+    color: black;
+  }
+  
+  .navbar-links li {
+    margin-left: 25px;
+  }
+  
+  .navbar-links a, 
+  .navbar-links a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+
+ /* button */
+.search-button {
+    background-color: #c2e6d9; /* Solid color fallback */
+    background-image: linear-gradient(to bottom right, #c2e6d9, #748b82);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Adjust as needed for rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle outer shadow */
+    font-weight: bold;
+    cursor: pointer;
+    outline: none; /* Removes the outline */
+    text-align: center; /* Center text */
+    display: inline-block; /* Allows us to set width and height */
+    width: auto; /* Adjust width as necessary */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  }
+  
+  /* Remove the outline when the button is clicked (focused) */
+  .search-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(194, 230, 217, 0.5); /* Custom focus style */
+  }
+  
+  /* Optional: Add a hover effect */
+  .search-button:hover {
+    background-image: linear-gradient(to bottom right, #9bc3b5, #506a5b);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  }
+  

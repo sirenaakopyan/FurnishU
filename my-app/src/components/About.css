@@ -1,0 +1,97 @@
+/* About.css */
+.about-container {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .about-hero {
+    background: linear-gradient(to bottom right, #aaa393, #6f6c61) no-repeat center center;
+    background-size: cover;
+    padding: 100px;
+    text-align: center;
+  }
+  .impact-infographic-section img {
+    max-width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures the image does not inline */
+    margin: 0 auto; /* Centers the image if it's not full width */
+  }
+  
+  .commitment-section,
+  .challenge-section,
+  .solution-section,
+  .why-furnishu-section,
+  .impact-infographic-section,
+  .cta-section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .commitment-section h2,
+  .challenge-section h2,
+  .solution-section h2,
+  .why-furnishu-section h2 {
+    margin-bottom: 20px;
+    color: rgb(91, 87, 68) 73, 73);
+  }
+  
+  .solution-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .why-furnishu-section .pillars {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .why-furnishu-section .pillar {
+    width: 25%;
+  }
+  
+  .impact-infographic-section img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .cta-section button {
+    background-color: #748b82;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-section button:hover {
+    background-color: #506a5b;
+  }
+  
+  .about-footer {
+    background-color: #f3f7f5;
+    color: #748b82;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .about-footer a {
+    color:#748b82;
+  }
+
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .why-furnishu-section .pillars {
+      flex-direction: column;
+    }
+  
+    .why-furnishu-section .pillar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
