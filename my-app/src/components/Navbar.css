@@ -48,7 +48,7 @@
   
 
  /* button */
-.search-button {
+.signup-button {
     background-color: #c2e6d9; /* Solid color fallback */
     background-image: linear-gradient(to bottom right, #c2e6d9, #748b82);
     color: white;
@@ -66,13 +66,13 @@
   }
   
   /* Remove the outline when the button is clicked (focused) */
-  .search-button:focus {
+  .signup-button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(194, 230, 217, 0.5); /* Custom focus style */
   }
   
   /* Optional: Add a hover effect */
-  .search-button:hover {
+  .signup-button:hover {
     background-image: linear-gradient(to bottom right, #9bc3b5, #506a5b);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
   }
