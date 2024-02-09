@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import app from '../firebase';
 // import { getAuth, signOut} from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
@@ -21,15 +21,15 @@ const Navbar = () => {
       return () => unsubscribe(); // Cleanup subscription on unmount
   }, []);
 
-  // const handleLogout = async () => {
-  //   try {
-  //     await signOut(getAuth(app));
-  //     console.log('User logged out successfully');
-  //     navigate('/'); // or wherever you want to redirect after logout
-  //   } catch (error) {
-  //     console.error('Logout failed:', error);
-  //   }
-  // };
+  const handleLogout = async () => {
+    try {
+      await signOut(getAuth(app));
+      console.log('User logged out successfully');
+      navigate('/'); // or wherever you want to redirect after logout
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
 
   return (
     <div>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <li>
                 {/* Changed from Link to button */}
                 {/* <button onClick={handleLogout} className="signup-button">Logout</button> */}
-                <Link to="/logout" className="signup-button">Log Out</Link>
+                <button onClick={handleLogout} className="signup-button">Logout</button>
            </li>
           </>
         ) : (
