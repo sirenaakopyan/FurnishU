@@ -1,0 +1,45 @@
+/* LandingPage.css */
+.landing-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f5f5f5;
+  }
+  
+  .landing-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .landing-header p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .btn-signup, .btn-browse {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-signup {
+    background-color: #5cb85c;
+  }
+  
+  .btn-signup:hover {
+    background-color: #4cae4c;
+  }
+  
+  .btn-browse {
+    background-color: #337ab7;
+  }
+  
+  .btn-browse:hover {
+    background-color: #286090;
+  }
+  

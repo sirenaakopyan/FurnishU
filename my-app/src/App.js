@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Signup from './components/Signup';
 import Logout from './components/Logout'; 
+import LandingPage from './components/LandingPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <div className='App'>
             <Navbar/>
             <Routes>
+            <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/logout" element={<Logout />} />
