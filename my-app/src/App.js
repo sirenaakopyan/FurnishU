@@ -3,6 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Signup from './components/Signup';
+import Logout from './components/Logout'; 
+
 
 function App() {
   return (    
@@ -12,6 +15,9 @@ function App() {
             <Navbar/>
             <Routes>
               <Route path="/about" element={<About />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/logout" element={<Logout />} />
+
               {/* Home
               page1
               page2 */}
