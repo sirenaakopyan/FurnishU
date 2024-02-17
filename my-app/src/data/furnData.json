@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Chair",
+      "type": "Furniture",
+      "description": "Brown, has one stain.",
+      "location": "15th Ave",
+      "condition": "Good",
+      "image": "img/chair.jpg"
+    },
+    {
+      "name": "Leather Couch",
+      "type": "Furniture",
+      "description": "Used couch from Costco.",
+      "location": "Located on 12th Ave and Campus Parkway",
+      "condition": "Like New",
+      "image": "img/couch.jpg"
+    },
+    {
+      "name": "Tiger Rice Cooker",
+      "type": "Cookware",
+      "description": "White, used for three months.",
+      "location": "Located on 13th Ave and University St.",
+      "condition": "Like New",
+      "image": "img/rice cooker.jpg"
+    },
+    {
+      "name": "Floor Lamp",
+      "type": "Furniture",
+      "description": "New Target lamp with bulb included.",
+      "location": "Located on 12th Ave.",
+      "condition": "Good",
+      "image": "img/lamp.jpg"
+    },
+    {
+      "name": "Round Mirror",
+      "type": "Decor",
+      "description": "Black round mirror, 30in",
+      "location": "Located on 8th Ave.",
+      "condition": "New",
+      "image": "img/mirror.jpg"
+    },
+    {
+      "name": "Plates",
+      "type": "Cookware",
+      "description": "White, from crate and barrell",
+      "location": "Located on 6th Ave.",
+      "condition": "Good",
+      "image": "img/plate.jpg"
+    },
+    {
+      "name": "TV",
+      "type": "Technology",
+      "description": "40 in Samsung",
+      "location": "Located on 10th Ave",
+      "condition": "Like New",
+      "image": "img/TV.jpg"
+    },
+    {
+      "name": "Plant",
+      "type": "Decor",
+      "description": "Fiddle Leaf Tree",
+      "location": "Located on 13th Ave.",
+      "condition": "New",
+      "image": "img/plant.jpg"
+    }
+  ]
+  

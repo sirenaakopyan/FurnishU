@@ -6,6 +6,12 @@ import About from './components/About';
 import Signup from './components/Signup';
 import Logout from './components/Logout'; 
 import LandingPage from './components/LandingPage';
+import { Footer } from './footer';
+import { HomePage } from './homePage.js';
+import SAMPLE_Furni from './data/furnData.json'; 
+
+
+
 
 
 function App() {
@@ -19,11 +25,15 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/logout" element={<Logout />} />
+              <Route path="/homepage" element={<HomePage furni={SAMPLE_Furni} />} />
 
               {/* Home
               page1
               page2 */}
               </Routes>
+              <footer>
+        <Footer />
+      </footer>
               {/* The rest of your app components */}
             </div>
         </div>
