@@ -25,7 +25,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/logout" element={<Logout />} />
-              <Route path="/homepage" element={<HomePage furni={SAMPLE_Furni} />} />
+              <Route path="/browse" element={<HomePage furni={SAMPLE_Furni} />} />
 
               {/* Home
               page1
