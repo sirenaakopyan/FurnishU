@@ -6,20 +6,19 @@ function ItemCard(props) {
 
   return (
     //onClick={handleCardClick}
-    <div className="d-flex col-md-6 col-lg-4 col-xl-3"  > 
-      <div className="card mb-4" >
+    <div className="d-flex"> 
+      <div className="card">
         <div className="card-body">
           <div className="row">
-            <div className="col col-sm-auto col-xl-12">
-              <img src={props.furniData.image} className="card-img pb-3" alt={props.furniData.name}/>
+            <div className="col">
+              <img src={props.furniData.image} className="card-img" alt={props.furniData.name}/>
             </div>
-            <div className="col-sm">
-              <h2 className="card-title">
+            <h4 className="card-title">
                 {props.furniData.name}
                 {/* {isClaimed ? ' (Claimed)' : ''} */}
-              </h2>
-              <h3 className="text-muted"> {props.furniData.location}</h3>
-              <p className="card-text"> {props.furniData.description}</p>
+            </h4>
+             {/*  <h3 className="text-muted"> {props.furniData.location}</h3>
+              <p className="card-text"> {props.furniData.description}</p> */}
               {/* <div 
                 className={`btn btn-dark blue-btn ${isClaimed ? 'claimed' : ''}`} 
                 onClick={handleClaimClick}
@@ -32,10 +31,10 @@ function ItemCard(props) {
           </div>
         </div>
       </div>
-      {/* {showModal && (
+      /* {/* {showModal && (
         <ModalContent furniData={props.furniData} toggleModal={toggleModal} claim={handleClaimClick} isClaimed={isClaimed} />
-      )} */}
-    </div>
+      )} */
+    //</div> 
   );
 }
 

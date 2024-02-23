@@ -1,19 +1,19 @@
 [
     {
-      "name": "Chair",
+      "name": "Desk Chair",
       "type": "Furniture",
-      "description": "Brown, has one stain.",
+      "description": "Blue office dorm chair",
       "location": "15th Ave",
       "condition": "Good",
-      "image": "img/chair.jpg"
+      "image": "img/deskchair.jpg"
     },
     {
-      "name": "Leather Couch",
+      "name": "Grey Couch",
       "type": "Furniture",
       "description": "Used couch from Costco.",
       "location": "Located on 12th Ave and Campus Parkway",
       "condition": "Like New",
-      "image": "img/couch.jpg"
+      "image": "img/greycouch.jpg"
     },
     {
       "name": "Tiger Rice Cooker",
@@ -21,7 +21,7 @@
       "description": "White, used for three months.",
       "location": "Located on 13th Ave and University St.",
       "condition": "Like New",
-      "image": "img/rice cooker.jpg"
+      "image": "img/ricecooker.jpg"
     },
     {
       "name": "Floor Lamp",

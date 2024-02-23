@@ -10,7 +10,7 @@ function HomePage(props) {
       <div>
         <main>
           <div className='container'>
-            <div className='row justify-content-center'>
+            <div className='row'>
               <ItemList furni={props.furni} ></ItemList>
             </div>
           </div>
