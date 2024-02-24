@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css'; // Make sure to create an About.css file in the same directory
-import infographicImage from '../img/info.jpg';
+import videographic from '../img/videographic.mp4';
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
         <h1>Empowering Sustainable Futures</h1>
       </div>
 
-      {/* Our Commitment Section
+      {/* Our Commitment Section*/}
       <div className="commitment-section">
         <h2>Our Commitment to Sustainability</h2>
         <p>
@@ -19,22 +19,22 @@ const About = () => {
       </div>
 
       {/* The Challenge Section */}
-      {/* <div className="challenge-section">
+      /* <div className="challenge-section">
         <h2>The Challenge</h2>
         <p>
           Each year, a staggering amount of furniture ends up in landfills. Our mission is to tackle this waste, one piece of furniture at a time.
         </p>
       </div>
 
-      Our Solution Section */}
-      {/* <div className="solution-section">
+      {/*Our Solution Section */}
+      /* <div className="solution-section">
         <h2>Our Solution</h2>
         <ul>
           <li>A secure platform for university communities.</li>
           <li>Easy access to sustainable disposal options.</li>
           <li>A cost-free service that promotes furniture reuse.</li>
         </ul>
-    </div> */}
+    </div> */
 
       {/* Why FurnishU Section */}
       <div className="why-furnishu-section">
@@ -61,15 +61,20 @@ const About = () => {
 
       {/* Impact Infographic Section */}
       <div className="impact-infographic-section">
-        {/* Placeholder for the infographic */}
-        <img src={infographicImage} alt="Sustainability Infographic" />
+      <h2>Why is recylcing furniture important?</h2>
+        <video controls>
+          <source src={videographic} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       {/* Call to Action Section */}
-      {/* <div className="cta-section">
+       <div className="cta-section">
         <h2>Join Our Effort</h2>
-        <button>Start Sharing</button>
-      </div> */}
+        <a href="https://www.unep.org/explore-topics/sustainable-development-goals/why-do-sustainable-development-goals-matter/goal-12">
+    <button>Start Sharing</button>
+  </a>
+      </div> 
 
       {/* Footer Section */}
       <footer className="about-footer">
