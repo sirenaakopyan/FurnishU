@@ -5,7 +5,7 @@
       "description": "Blue office dorm chair",
       "location": "15th Ave",
       "condition": "Good",
-      "image": "img/deskchair.jpg"
+      "image": "deskChair"
     },
     {
       "name": "Grey Couch",
@@ -13,7 +13,7 @@
       "description": "Used couch from Costco.",
       "location": "Located on 12th Ave and Campus Parkway",
       "condition": "Like New",
-      "image": "img/greycouch.jpg"
+      "image": "greyCouch"
     },
     {
       "name": "Tiger Rice Cooker",

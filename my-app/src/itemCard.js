@@ -1,9 +1,15 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import React, {useState, useEffect} from 'react';
+
+import deskChairImage from './img/deskchair.jpg'
+import greyCouchImage from './img/greycouch.jpg'
 import './index.css';
 
 function ItemCard(props) {
-
+  const imageMapping = {
+    deskChair: deskChairImage,
+    greyCouch: greyCouchImage
+  }
   return (
     //onClick={handleCardClick}
     <div className="d-flex"> 
@@ -11,7 +17,7 @@ function ItemCard(props) {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <img src={props.furniData.image} className="card-img" alt={props.furniData.name}/>
+              <img src={imageMapping[props.furniData.image]} className="card-img" alt={props.furniData.name}/>
             </div>
             <h4 className="card-title">
                 {props.furniData.name}
