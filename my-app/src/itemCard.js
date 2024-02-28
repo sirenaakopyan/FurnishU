@@ -3,12 +3,32 @@ import React, {useState, useEffect} from 'react';
 
 import deskChairImage from './img/deskchair.jpg'
 import greyCouchImage from './img/greycouch.jpg'
+import riceCookerImage from './img/ricecooker.jpg'
+import floorlampImage from './img/floorlamp.jpg'
+import roundmirrorImage from './img/roundmirror.jpg'
+import platesImage from './img/plates.jpg'
+import plantsImage from './img/plants.jpg'
+import tvImage from './img/tv.jpg'
+import bedframeImage from './img/bedframe.jpg'
+import deskImage from './img/desk.jpg'
+import browncouchImage from './img/browncouch.jpg'
+
+
 import './index.css';
 
 function ItemCard(props) {
   const imageMapping = {
     deskChair: deskChairImage,
-    greyCouch: greyCouchImage
+    greyCouch: greyCouchImage,
+    riceCooker: riceCookerImage,
+    floorlamp: floorlampImage,
+    roundmirror: roundmirrorImage,
+    plates: platesImage,
+    plants: plantsImage,
+    tv: tvImage,
+    bedframe: bedframeImage,
+    desk: deskImage,
+    browncouch: browncouchImage,
   }
   return (
     //onClick={handleCardClick}
@@ -23,8 +43,8 @@ function ItemCard(props) {
                 {props.furniData.name}
                 {/* {isClaimed ? ' (Claimed)' : ''} */}
             </h4>
-             {/*  <h3 className="text-muted"> {props.furniData.location}</h3>
-              <p className="card-text"> {props.furniData.description}</p> */}
+             <h3 className="text-muted"> {props.furniData.location}</h3>
+              <p className="card-text"> {props.furniData.description}</p>
               {/* <div 
                 className={`btn btn-dark blue-btn ${isClaimed ? 'claimed' : ''}`} 
                 onClick={handleClaimClick}

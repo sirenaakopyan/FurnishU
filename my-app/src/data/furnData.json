@@ -21,7 +21,7 @@
       "description": "White, used for three months.",
       "location": "Located on 13th Ave and University St.",
       "condition": "Like New",
-      "image": "img/ricecooker.jpg"
+      "image": "riceCooker"
     },
     {
       "name": "Floor Lamp",
@@ -29,7 +29,7 @@
       "description": "New Target lamp with bulb included.",
       "location": "Located on 12th Ave.",
       "condition": "Good",
-      "image": "img/lamp.jpg"
+      "image": "floorlamp"
     },
     {
       "name": "Round Mirror",
@@ -37,7 +37,7 @@
       "description": "Black round mirror, 30in",
       "location": "Located on 8th Ave.",
       "condition": "New",
-      "image": "img/mirror.jpg"
+      "image": "roundmirror"
     },
     {
       "name": "Plates",
@@ -45,7 +45,7 @@
       "description": "White, from crate and barrell",
       "location": "Located on 6th Ave.",
       "condition": "Good",
-      "image": "img/plate.jpg"
+      "image": "plates"
     },
     {
       "name": "TV",
@@ -53,7 +53,7 @@
       "description": "40 in Samsung",
       "location": "Located on 10th Ave",
       "condition": "Like New",
-      "image": "img/TV.jpg"
+      "image": "tv"
     },
     {
       "name": "Plant",
@@ -61,7 +61,30 @@
       "description": "Fiddle Leaf Tree",
       "location": "Located on 13th Ave.",
       "condition": "New",
-      "image": "img/plant.jpg"
+      "image": "plants"
+    },
+    {
+      "name": "Bedframe",
+      "type": "Furniture",
+      "description": "Metal bed frame",
+      "location": "Located on 19th Ave.",
+      "condition": "Used",
+      "image": "bedframe"
+    },{
+      "name": "Desk",
+      "type": "Furniture",
+      "description": "Used wooden desk from target",
+      "location": "Located on 18th Ave.",
+      "condition": "Used",
+      "image": "desk"
+    },
+    {
+      "name": "Couch",
+      "type": "Furniture",
+      "description": "Brown couch from ikea, like new",
+      "location": "Located on 22nd Ave NE",
+      "condition": "Used",
+      "image": "browncouch"
     }
   ]
   
