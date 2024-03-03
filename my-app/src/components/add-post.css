@@ -1,0 +1,41 @@
+.create-listing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }  
+  .listingTitle,
+  .description,
+  .itemCategory,
+  .uploadUpTo5Photos {
+    margin-bottom: 15px;
+  }
+  
+ 
