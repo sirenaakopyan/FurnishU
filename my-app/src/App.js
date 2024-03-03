@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Signup from './components/Signup';
 import Logout from './components/Logout'; 
+import Add_Post from './components/add-post.js';
 import LandingPage from './components/LandingPage';
 import { Footer } from './footer';
 import { HomePage } from './homePage.js';
@@ -25,6 +26,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/logout" element={<Logout />} />
+              <Route path="/add-post" element={<Add_Post />} />
               <Route path="/browse" element={<HomePage furni={SAMPLE_Furni} />} />
 
               {/* Home
