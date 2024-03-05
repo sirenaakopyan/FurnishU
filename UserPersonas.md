@@ -1,6 +1,6 @@
-## User Personas 
+# User Personas 
 
-# Students and UW Faculty
+## Students and UW Faculty
     The students of University of Washington and the faculty who live
     near the campus is our target audience. The premis of this
     application is to serve as a free furniture platform to not only
@@ -15,7 +15,7 @@
     location of the item to decide whether or not picking it up is
     feasible.
 
-# City of Seattle Waste Management
+## City of Seattle Waste Management
     By creating this application we are helping the City of Seattle's
     Waste Management Government department reduce the amount of
     furniture waste they have to handle. Each year around move-in or
@@ -29,7 +29,7 @@
     of Udistrict, but also our local wildlife, and residental
     beautification.
 
-# City of Seattle Residents
+## City of Seattle Residents
     By cleaning up the streets of Udistrict, we are beautifying the
     streets of Seattle. This application will prevent build-up on
     residential streets, preventing traffic blockages, and
