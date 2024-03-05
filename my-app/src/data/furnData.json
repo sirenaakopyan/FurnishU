@@ -1,90 +1,101 @@
 [
-    {
-      "name": "Desk Chair",
-      "type": "Furniture",
-      "description": "Blue office dorm chair",
-      "location": "15th Ave",
-      "condition": "Good",
-      "image": "deskChair"
-    },
-    {
-      "name": "Grey Couch",
-      "type": "Furniture",
-      "description": "Used couch from Costco.",
-      "location": "Located on 12th Ave and Campus Parkway",
-      "condition": "Like New",
-      "image": "greyCouch"
-    },
-    {
-      "name": "Tiger Rice Cooker",
-      "type": "Cookware",
-      "description": "White, used for three months.",
-      "location": "Located on 13th Ave and University St.",
-      "condition": "Like New",
-      "image": "riceCooker"
-    },
-    {
-      "name": "Floor Lamp",
-      "type": "Furniture",
-      "description": "New Target lamp with bulb included.",
-      "location": "Located on 12th Ave.",
-      "condition": "Good",
-      "image": "floorlamp"
-    },
-    {
-      "name": "Round Mirror",
-      "type": "Decor",
-      "description": "Black round mirror, 30in",
-      "location": "Located on 8th Ave.",
-      "condition": "New",
-      "image": "roundmirror"
-    },
-    {
-      "name": "Plates",
-      "type": "Cookware",
-      "description": "White, from crate and barrell",
-      "location": "Located on 6th Ave.",
-      "condition": "Good",
-      "image": "plates"
-    },
-    {
-      "name": "TV",
-      "type": "Technology",
-      "description": "40 in Samsung",
-      "location": "Located on 10th Ave",
-      "condition": "Like New",
-      "image": "tv"
-    },
-    {
-      "name": "Plant",
-      "type": "Decor",
-      "description": "Fiddle Leaf Tree",
-      "location": "Located on 13th Ave.",
-      "condition": "New",
-      "image": "plants"
-    },
-    {
-      "name": "Bedframe",
-      "type": "Furniture",
-      "description": "Metal bed frame",
-      "location": "Located on 19th Ave.",
-      "condition": "Used",
-      "image": "bedframe"
-    },{
-      "name": "Desk",
-      "type": "Furniture",
-      "description": "Used wooden desk from target",
-      "location": "Located on 18th Ave.",
-      "condition": "Used",
-      "image": "desk"
-    },
-    {
-      "name": "Couch",
-      "type": "Furniture",
-      "description": "Brown couch from ikea, like new",
-      "location": "Located on 22nd Ave NE",
-      "condition": "Used",
-      "image": "browncouch"
-    }
-  ]
-  
+  {
+    "name": "Desk Chair",
+    "type": "Furniture",
+    "description": "Blue office dorm chair",
+    "location": "15th Ave",
+    "condition": "Good",
+    "image": "deskChair",
+    "contact": "minas@uw.edu"
+  },
+  {
+    "name": "Grey Couch",
+    "type": "Furniture",
+    "description": "Used couch from Costco.",
+    "location": "12th Ave & Campus Parkway",
+    "condition": "Like New",
+    "image": "greyCouch",
+    "contact": "paruyrSevak@uw.edu"
+  },
+  {
+    "name": "Tiger Rice Cooker",
+    "type": "Cookware",
+    "description": "White, used for three months.",
+    "location": "13th Ave & University St",
+    "condition": "Like New",
+    "image": "riceCooker",
+    "contact": "sirenaak@uw.edu"
+  },
+  {
+    "name": "Floor Lamp",
+    "type": "Furniture",
+    "description": "New Target lamp with bulb included.",
+    "location": "12th Ave",
+    "condition": "Good",
+    "image": "floorlamp",
+    "contact": "levonaronian7@uw.edu"
+  },
+  {
+    "name": "Round Mirror",
+    "type": "Decor",
+    "description": "Black round mirror, 30in",
+    "location": "8th Ave",
+    "condition": "New",
+    "image": "roundmirror",
+    "contact": "charlesAznavour@uw.edu"
+  },
+  {
+    "name": "Plates",
+    "type": "Cookware",
+    "description": "White, from crate and barrell",
+    "location": "6th Ave",
+    "condition": "Good",
+    "image": "plates",
+    "contact": "ghazarian@uw.edu"
+  },
+  {
+    "name": "TV",
+    "type": "Technology",
+    "description": "40 in Samsung",
+    "location": "10th Ave",
+    "condition": "Like New",
+    "image": "tv",
+    "contact": "tigranMets@uw.edu"
+  },
+  {
+    "name": "Plant",
+    "type": "Decor",
+    "description": "Fiddle Leaf Tree",
+    "location": "13th Ave",
+    "condition": "New",
+    "image": "plants",
+    "contact": "monteMelkonian@uw.edu"
+  },
+  {
+    "name": "Bedframe",
+    "type": "Furniture",
+    "description": "Metal bed frame",
+    "location": "19th Ave",
+    "condition": "Used",
+    "image": "bedframe",
+    "contact": "fedayi@uw.edu"
+  },
+  {
+    "name": "Desk",
+    "type": "Furniture",
+    "description": "Used wooden desk from target",
+    "location": "18th Ave",
+    "condition": "Used",
+    "image": "desk",
+    "contact": "sariKamin@uw.edu"
+  },
+  {
+    "name": "Couch",
+    "type": "Furniture",
+    "description": "Brown couch from ikea, like new",
+    "location": "22nd Ave NE",
+    "condition": "Used",
+    "image": "browncouch",
+    "contact": "sirunAxchik@uw.edu"
+  }
+]

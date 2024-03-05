@@ -1,0 +1,55 @@
+/* footer.css */
+
+.footer {
+    background-color: #f3f7f5;
+    color: #758a81;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 1em; /* Adjust size as needed */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.footer-info {
+    font-size: 0.8em; /* Make font size the same for both elements */
+    display: inline; /* Display inline for horizontal layout */
+    margin: 0 5px; /* Adjust margin as needed */
+}
+
+.footer-link {
+    color: #758a81;
+    display: inline;
+    align-items: center;
+    text-decoration: none; /* Remove default underline */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #146b00;
+}
+
+.footer-content :link{
+    color: #758a81;
+    text-decoration: none;
+}
+.email-link:hover {
+    color: #146b00;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 5px;
+
+    }
+}

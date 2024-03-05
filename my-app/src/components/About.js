@@ -76,14 +76,6 @@ const About = () => {
   </a>
       </div> 
 
-      {/* Footer Section */}
-      <footer className="about-footer">
-        <p>For more information,   <a href="https://www.unep.org/explore-topics/sustainable-development-goals/why-do-sustainable-development-goals-matter/goal-12" target="_blank" rel="noopener noreferrer">
-            visit the UN SDGs site
-            </a>.
-        </p>
-        {/* Add any additional footer content here */}
-      </footer>
     </div>
   );
 };

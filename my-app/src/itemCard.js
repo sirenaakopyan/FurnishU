@@ -14,7 +14,7 @@ import deskImage from './img/desk.jpg'
 import browncouchImage from './img/browncouch.jpg'
 
 
-import './index.css';
+import './itemCard.css';
 
 function ItemCard(props) {
   const imageMapping = {
@@ -45,6 +45,7 @@ function ItemCard(props) {
             </h4>
              <h3 className="text-muted"> {props.furniData.location}</h3>
               <p className="card-text"> {props.furniData.description}</p>
+              <p className="card-text"> Contact: {props.furniData.contact}</p> {/* Contact information added here */}
               {/* <div 
                 className={`btn btn-dark blue-btn ${isClaimed ? 'claimed' : ''}`} 
                 onClick={handleClaimClick}
