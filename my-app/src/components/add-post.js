@@ -18,7 +18,9 @@ const Add_Post = () => {
 
   const handleSubmit = () => {
     // Add your logic for handling the form submission here
-    console.log('Form submitted:', { listingName, category, description, photos });
+    // const newPost = { listingName, category, description, photos };
+    console.log('Form submitted:', { listingName, category, description, photos, location, contact });
+    // Add_Post(newPost); // Call the addPost function to update the state in BrowsePage
   };
 
   return (
@@ -47,8 +49,8 @@ const Add_Post = () => {
             <option value="electronics">Electronics</option>
             <option value="clothing">Clothing</option>
             <option value="furniture">Furniture</option>
-            <option value="furniture">Household Appliances</option>
-            <option value="furniture">Paraphernalia</option>
+            <option value="appliances">Household Appliances</option>
+            <option value="paraphernalia">Paraphernalia</option>
             {/* Add more categories as needed */}
           </select>
         </div>
