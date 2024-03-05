@@ -43,9 +43,6 @@ const Navbar = () => {
             <Link to="/browse" className="active">Browse</Link>
           </li>
           <li>
-            <Link to="/add-post">Post</Link>
-          </li>
-          <li>
             <Link to="/about">About</Link>
           </li>
 
