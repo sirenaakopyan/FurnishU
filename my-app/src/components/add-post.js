@@ -1,7 +1,52 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './add-post.css';
+import { initializeApp } from '../firebase.js';
+import firebase, { database } from '../firebase.js';
+import {ref} from 'firebase/database';
+import {push} from 'firebase/database';
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBEtk9vQlzGhlkrFEu40Ta2X4FkfPdCoEk",
+  authDomain: "info-442-e7337.firebaseapp.com",
+  projectId: "info-442-e7337",
+  storageBucket: "info-442-e7337.appspot.com",
+  messagingSenderId: "473881955858",
+  appId: "1:473881955858:web:002a6822c0d7b2824ed2cb"
+};
+
+const Add_Post = () => {
+  const [listingName, setListingName] = useState('');
+  const [category, setCategory] = useState('furniture');
+  const [description, setDescription] = useState('');
+  const [contact, setContact] = useState('');
+  const [location, setLocation] = useState('');
+  const [photos, setPhotos] = useState([]);
+
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files).slice(0, 5);
+    setPhotos(files);
+  };
+
+  const handleSubmit = () => {
+    const newPost = {
+      listingName,
+      category,
+      description,
+      photos: photos.map((photo) => photo.name),
+      location,
+      contact,
+    };
+
+    // Push data to Firebase
+    const listingsRef = ref(database, 'listings');
+    push(listingsRef, newPost);
+
+    console.log('Form submitted:', newPost);
+  };
+
+/*
 const Add_Post = () => {
   const [listingName, setListingName] = useState('');
   const [category, setCategory] = useState('furniture');
@@ -16,12 +61,48 @@ const Add_Post = () => {
     setPhotos(files);
   };
 
+  /*
   const handleSubmit = () => {
     // Add your logic for handling the form submission here
     // const newPost = { listingName, category, description, photos };
     console.log('Form submitted:', { listingName, category, description, photos, location, contact });
     // Add_Post(newPost); // Call the addPost function to update the state in BrowsePage
+  }; 
+
+  const handleSubmit = () => {
+    const newPost = {
+      listingName,
+      category,
+      description,
+      photos: photos.map((photo) => photo.name),
+      location,
+      contact,
+    };
+
+    // Push data to Firebase
+    const databaseRef = firebase.database().ref('listings');
+    databaseRef.push(newPost);
+
+    console.log('Form submitted:', newPost);
   };
+
+/*
+  const handleInputChange = (e) => {
+    const { id, value, files } = e.target;
+
+    if (files) {
+        setBusinessData((prevData) => ({
+            ...prevData,
+            [id]: files[0],
+        }));
+    } else {
+        setBusinessData((prevData) => ({
+            ...prevData,
+            [id]: value,
+        }));
+    }
+};
+*/
 
   return (
     <div className="create-listing-container">
