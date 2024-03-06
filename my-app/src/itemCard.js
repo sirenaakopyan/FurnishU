@@ -105,18 +105,33 @@ function ItemCard(props) {
   );
 }
 
-function ItemList(props) {
+export function ItemList(props) {
   const [selected, setSelected] = useState('');
 
   const handleSelected = (event) => {
-    setSelected(event.target.value);
-    // Add logic to filter items based on the selected condition
+    const selectedValue = event.target.value;
+    setSelected(selectedValue);
+    // Ensure onFilterChange is a function before calling it
+    if (typeof props.onFilterChange === 'function') {
+      props.onFilterChange(selectedValue);
+    } else {
+      console.error('onFilterChange is not a function');
+    }
   };
 
   const clear = () => {
     setSelected('');
-    // Add logic to clear filters
-  };
+    if (typeof props.clearFilter === 'function') {
+      props.clearFilter();
+    } else {
+      console.error('clearFilter is not a function');
+    }
+  }
+
+  // Filter items based on the selected condition
+  const filteredItems = selected
+    ? props.furni.filter((item) => item.condition === selected)
+    : props.furni;
 
   return (
     <div>
@@ -134,14 +149,14 @@ function ItemList(props) {
           <option value="New">New</option>
           <option value="Like New">Like New</option>
           <option value="Good">Good</option>
-          <option value="Fair">Fair</option>
+          <option value="Used">Used</option>
         </select>
         <button className="filter-button" onClick={clear}>
           Clear Filters
         </button>
       </div>
       <div className="row">
-        {props.furni.map((item) => (
+        {filteredItems.map((item) => (
           <ItemCard key={item.name} furniData={item} claim={props.claim} />
         ))}
       </div>
@@ -149,4 +164,42 @@ function ItemList(props) {
   );
 }
 
-export default ItemList;
+export function Filter(props) {
+  const [selected, setSelected] = useState('');
+
+  function handleSelected(e) {
+    const selectedValue = e.target.value;
+    setSelected(selectedValue);
+    // this is what makes it so that when filter is changed, automatically filters the correct 'cards'
+    props.onFilterChange(selectedValue);
+  }
+
+  function clear() {
+    setSelected('');
+    props.clearFilter();
+  }
+
+  return (
+    <div className="filter-condition">
+      <label htmlFor="filtercondition">Filter Item Condition</label>
+      <select
+        id="filtercondition"
+        name="filtercondition"
+        value={selected}
+        onChange={handleSelected}
+      >
+        <option value="" disabled>
+          Select condition
+        </option>
+        <option value="New">New</option>
+        <option value="Like New">Like New</option>
+        <option value="Good">Good</option>
+        <option value="Used">Used</option>
+      </select>
+      <button className="filter-button" onClick={clear}>
+        Clear Filters
+      </button>
+    </div>
+  );
+}
+
