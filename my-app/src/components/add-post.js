@@ -46,10 +46,10 @@ const Add_Post = () => {
             onChange={(e) => setCategory(e.target.value)}
             required
           >
-            <option value="electronics">Electronics</option>
-            <option value="clothing">Clothing</option>
+            <option value="cookware">Cookware</option>
+            <option value="decor">Decor</option>
             <option value="furniture">Furniture</option>
-            <option value="appliances">Household Appliances</option>
+            <option value="technology">Technology</option>
             <option value="paraphernalia">Paraphernalia</option>
             {/* Add more categories as needed */}
           </select>
