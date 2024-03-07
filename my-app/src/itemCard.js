@@ -51,7 +51,7 @@ function ItemCard(props) {
     event.stopPropagation();
     if (!isClaimed && user) {
       setIsClaimed(true);
-      props.claim(props.furniData.name);
+      props.claim(props.furniData.listingName);
     } else if (!user) {
       alert("Please sign in");
     }
@@ -63,11 +63,11 @@ function ItemCard(props) {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <img src={imageMapping[props.furniData.image]} className="card-img" alt={props.furniData.name} />
+              <img src={imageMapping[props.furniData.image]} className="card-img" alt={props.furniData.listingName} />
             </div>
             <div className="col">
               <h4 className="card-title">
-                {props.furniData.name}
+                {props.furniData.listingName}
                 {isClaimed ? ' (Claimed)' : ''}
               </h4>
               <h3 className="text-muted">{props.furniData.location}</h3>
@@ -94,7 +94,7 @@ function ItemCard(props) {
             <div className="modal-content">
               <img src={imageMapping[props.furniData.image]} className="card-img pb-3" alt={props.furniData.name} />
               <div className="text-content">
-                <h2 className="card-title">{props.furniData.name}</h2>
+                <h2 className="card-title">{props.furniData.listingName}</h2>
                 <h3 className="text-muted">{props.furniData.location}</h3>
                 <p className="card-text">{props.furniData.description}</p>
               </div>
@@ -183,7 +183,7 @@ export function ItemList(props) {
       </div>
       <div className="row">
         {filteredItems.map((item) => (
-          <ItemCard key={item.name} furniData={item} claim={props.claim} />
+          <ItemCard key={item.listingName} furniData={item} claim={props.claim} />
         ))}
       </div>
     </div>

@@ -3,6 +3,7 @@ import { ItemList, Filter } from './itemCard.js';
 import Add_Post from './components/add-post.js';
 import { getDatabase, ref as dbRef, set as firebaseSet, get, child } from 'firebase/database'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+// import { fetchListingsFromFirebase } from './firebase'; // Add the function to fetch data
 
 function ParentComponent(props) {
   const [filterValue, setFilterValue] = useState('');
@@ -32,7 +33,30 @@ function ParentComponent(props) {
 }
 
 export default ParentComponent;
+
 function HomePage(props) {
+/*
+  const HomePage = () => {
+    const [listings, setListings] = useState([]);
+  
+    // Fetch listings from Firebase on component mount
+    useEffect(() => {
+      const fetchListings = async () => {
+        try {
+          const firebaseListings = await fetchListingsFromFirebase();
+          setListings(firebaseListings);
+        } catch (error) {
+          console.error('Error fetching listings from Firebase:', error.message);
+        }
+      };
+  
+      fetchListings();
+    }, []); // Empty dependency array means this effect runs only once on mount
+  
+    const addListing = (newListing) => {
+      setListings((prevListings) => [...prevListings, newListing]);
+    };
+*/
     return (
       <div>
         <main>
@@ -44,6 +68,6 @@ function HomePage(props) {
         </main>
       </div>
     );
-}
-  
+  }
+
 export { HomePage };

@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push } from 'firebase/database';
+import { getDatabase, ref, get } from 'firebase/database';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,5 +25,22 @@ const firebaseConfig = {
 // initialize firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-export default app;
+
+/*
+// Function to fetch listings from Firebase
+const fetchListingsFromFirebase = async () => {
+  const listingsRef = ref(database, 'listings');
+  const snapshot = await get(listingsRef);
+  const listings = [];
+
+  if (snapshot.exists()) {
+    snapshot.forEach((childSnapshot) => {
+      listings.push(childSnapshot.val());
+    });
+  }
+
+  return listings;
+};
+export { fetchListingsFromFirebase, database }; */
 export { database };
+export default app;

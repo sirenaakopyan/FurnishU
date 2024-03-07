@@ -23,11 +23,11 @@ const Add_Post = () => {
   const [contact, setContact] = useState('');
   const [location, setLocation] = useState('');
   const [condition, setCondition] = useState('Used');
-  const [photos, setPhotos] = useState([]);
+  const [image, setImage] = useState([]);
 
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files).slice(0, 5);
-    setPhotos(files);
+    setImage(files);
   };
 
   const handleSubmit = () => {
@@ -37,7 +37,7 @@ const Add_Post = () => {
       description,
       location,
       condition,
-      photos: photos.map((photo) => photo.name),
+      image: image.map((image) => image.name),
       contact,
     };
 
@@ -53,7 +53,7 @@ const Add_Post = () => {
     setDescription('');
     setLocation('');
     setCondition('Used');
-    setPhotos([]);
+    setImage([]);
     setContact('');
   };
 
@@ -64,19 +64,13 @@ const Add_Post = () => {
   const [description, setDescription] = useState('');
   const [contact, setContact] = useState('');
   const [location, setLocation] = useState('');
-  const [photos, setPhotos] = useState([]);
-
-  const handleFileChange = (e) => {
-    // Limit the number of uploaded photos to 5
-    const files = Array.from(e.target.files).slice(0, 5);
-    setPhotos(files);
-  };
+  const [image, setImage] = useState([]);
 
   /*
   const handleSubmit = () => {
     // Add your logic for handling the form submission here
-    // const newPost = { listingName, type, description, photos };
-    console.log('Form submitted:', { listingName, type, description, photos, location, contact });
+    // const newPost = { listingName, type, description, image };
+    console.log('Form submitted:', { listingName, type, description, image, location, contact });
     // Add_Post(newPost); // Call the addPost function to update the state in BrowsePage
   }; 
 
@@ -85,7 +79,7 @@ const Add_Post = () => {
       listingName,
       type,
       description,
-      photos: photos.map((photo) => photo.name),
+      image: image.map((image) => image.name),
       location,
       contact,
     };
@@ -160,10 +154,10 @@ const Add_Post = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="photos">Upload up to five photos:</label>
+          <label htmlFor="image">Upload image:</label>
           <input
             type="file"
-            id="photos"
+            id="image"
             accept="image/*"
             multiple
             onChange={handleFileChange}

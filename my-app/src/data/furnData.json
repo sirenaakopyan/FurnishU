@@ -1,6 +1,6 @@
 [
   {
-    "name": "Desk Chair",
+    "listingName": "Desk Chair",
     "type": "Furniture",
     "description": "Blue office dorm chair",
     "location": "15th Ave",
@@ -9,7 +9,7 @@
     "contact": "minas@uw.edu"
   },
   {
-    "name": "Grey Couch",
+    "listingName": "Grey Couch",
     "type": "Furniture",
     "description": "Used couch from Costco.",
     "location": "12th Ave & Campus Parkway",
@@ -18,7 +18,7 @@
     "contact": "paruyrSevak@uw.edu"
   },
   {
-    "name": "Tiger Rice Cooker",
+    "listingName": "Tiger Rice Cooker",
     "type": "Cookware",
     "description": "White, used for three months.",
     "location": "13th Ave & University St",
@@ -27,7 +27,7 @@
     "contact": "sirenaak@uw.edu"
   },
   {
-    "name": "Floor Lamp",
+    "listingName": "Floor Lamp",
     "type": "Furniture",
     "description": "New Target lamp with bulb included.",
     "location": "12th Ave",
@@ -36,7 +36,7 @@
     "contact": "levonaronian7@uw.edu"
   },
   {
-    "name": "Round Mirror",
+    "listingName": "Round Mirror",
     "type": "Decor",
     "description": "Black round mirror, 30in",
     "location": "8th Ave",
@@ -45,7 +45,7 @@
     "contact": "charlesAznavour@uw.edu"
   },
   {
-    "name": "Plates",
+    "listingName": "Plates",
     "type": "Cookware",
     "description": "White, from crate and barrell",
     "location": "6th Ave",
@@ -54,7 +54,7 @@
     "contact": "ghazarian@uw.edu"
   },
   {
-    "name": "TV",
+    "listingName": "TV",
     "type": "Technology",
     "description": "40 in Samsung",
     "location": "10th Ave",
@@ -63,7 +63,7 @@
     "contact": "tigranMets@uw.edu"
   },
   {
-    "name": "Plant",
+    "listingName": "Plant",
     "type": "Decor",
     "description": "Fiddle Leaf Tree",
     "location": "13th Ave",
@@ -72,7 +72,7 @@
     "contact": "monteMelkonian@uw.edu"
   },
   {
-    "name": "Bedframe",
+    "listingName": "Bedframe",
     "type": "Furniture",
     "description": "Metal bed frame",
     "location": "19th Ave",
@@ -81,7 +81,7 @@
     "contact": "fedayi@uw.edu"
   },
   {
-    "name": "Desk",
+    "listingName": "Desk",
     "type": "Furniture",
     "description": "Used wooden desk from target",
     "location": "18th Ave",
@@ -90,7 +90,7 @@
     "contact": "sariKamin@uw.edu"
   },
   {
-    "name": "Couch",
+    "listingName": "Couch",
     "type": "Furniture",
     "description": "Brown couch from ikea, like new",
     "location": "22nd Ave NE",
