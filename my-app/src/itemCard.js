@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import firebase, { database } from './firebase.js';
+import {ref, push, getDatabase, onValue } from 'firebase/database';
 import deskChairImage from './img/deskchair.jpg';
 import greyCouchImage from './img/greycouch.jpg';
 import riceCookerImage from './img/ricecooker.jpg';
@@ -107,6 +109,30 @@ function ItemCard(props) {
 
 export function ItemList(props) {
   const [selected, setSelected] = useState('');
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    const auth = getAuth();
+    const authUnsubscribe = onAuthStateChanged(auth, (user) => {
+      // You can add logic here to update the UI based on the user's authentication status
+    });
+
+    const database = getDatabase();
+    const listingsRef = ref(database, 'listings');
+
+    const listingsUnsubscribe = onValue(listingsRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const listingsData = snapshot.val();
+        const listingsArray = Object.values(listingsData);
+        setListings(listingsArray);
+      }
+    });
+
+    return () => {
+      authUnsubscribe();
+      listingsUnsubscribe();
+    };
+  }, []);
 
   const handleSelected = (event) => {
     const selectedValue = event.target.value;

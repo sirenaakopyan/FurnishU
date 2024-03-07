@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList, Filter } from './itemCard.js';
+import Add_Post from './components/add-post.js';
 import { getDatabase, ref as dbRef, set as firebaseSet, get, child } from 'firebase/database'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 

@@ -18,10 +18,11 @@ const firebaseConfig = {
 
 const Add_Post = () => {
   const [listingName, setListingName] = useState('');
-  const [category, setCategory] = useState('furniture');
+  const [type, setType] = useState('Furniture');
   const [description, setDescription] = useState('');
   const [contact, setContact] = useState('');
   const [location, setLocation] = useState('');
+  const [condition, setCondition] = useState('Used');
   const [photos, setPhotos] = useState([]);
 
   const handleFileChange = (e) => {
@@ -32,10 +33,11 @@ const Add_Post = () => {
   const handleSubmit = () => {
     const newPost = {
       listingName,
-      category,
+      type,
       description,
-      photos: photos.map((photo) => photo.name),
       location,
+      condition,
+      photos: photos.map((photo) => photo.name),
       contact,
     };
 
@@ -44,12 +46,21 @@ const Add_Post = () => {
     push(listingsRef, newPost);
 
     console.log('Form submitted:', newPost);
+
+      // Clear the form by resetting state values
+    setListingName('');
+    setType('furniture');
+    setDescription('');
+    setLocation('');
+    setCondition('Used');
+    setPhotos([]);
+    setContact('');
   };
 
 /*
 const Add_Post = () => {
   const [listingName, setListingName] = useState('');
-  const [category, setCategory] = useState('furniture');
+  const [type, setType] = useState('furniture');
   const [description, setDescription] = useState('');
   const [contact, setContact] = useState('');
   const [location, setLocation] = useState('');
@@ -64,15 +75,15 @@ const Add_Post = () => {
   /*
   const handleSubmit = () => {
     // Add your logic for handling the form submission here
-    // const newPost = { listingName, category, description, photos };
-    console.log('Form submitted:', { listingName, category, description, photos, location, contact });
+    // const newPost = { listingName, type, description, photos };
+    console.log('Form submitted:', { listingName, type, description, photos, location, contact });
     // Add_Post(newPost); // Call the addPost function to update the state in BrowsePage
   }; 
 
   const handleSubmit = () => {
     const newPost = {
       listingName,
-      category,
+      type,
       description,
       photos: photos.map((photo) => photo.name),
       location,
@@ -120,18 +131,18 @@ const Add_Post = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="category">Category:</label>
+          <label htmlFor="type">Type:</label>
           <select
-            id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            id="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
             required
           >
-            <option value="cookware">Cookware</option>
-            <option value="decor">Decor</option>
-            <option value="furniture">Furniture</option>
-            <option value="technology">Technology</option>
-            <option value="paraphernalia">Paraphernalia</option>
+            <option value="Cookware">Cookware</option>
+            <option value="Decor">Decor</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Technology">Technology</option>
+            <option value="Paraphernalia">Paraphernalia</option>
             {/* Add more categories as needed */}
           </select>
         </div>
@@ -160,7 +171,7 @@ const Add_Post = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="description">Location:</label>
+          <label htmlFor="location">Location:</label>
           <textarea
             id="location"
             rows={3}
@@ -168,6 +179,22 @@ const Add_Post = () => {
             onChange={(e) => setLocation(e.target.value)}
             required
           />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="condition">Condition:</label>
+          <select
+            id="condition"
+            value={condition}
+            onChange={(e) => setCondition(e.target.value)}
+            required
+          >
+            <option value="New">New</option>
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Used">Used</option>
+            {/* Add more categories as needed */}
+          </select>
         </div>
 
         <div className="form-group">
