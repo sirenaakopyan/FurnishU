@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import firebase, { database } from './firebase.js';
-import {ref, push, getDatabase, onValue } from 'firebase/database';
+import {ref, child, push, getDatabase, onValue } from 'firebase/database';
 import deskChairImage from './img/deskchair.jpg';
 import greyCouchImage from './img/greycouch.jpg';
 import riceCookerImage from './img/ricecooker.jpg';
@@ -14,6 +14,18 @@ import bedframeImage from './img/bedframe.jpg';
 import deskImage from './img/desk.jpg';
 import browncouchImage from './img/browncouch.jpg';
 import './itemCard.css';
+
+//get a reference to the database service
+const db = getDatabase();
+
+// referencing each of the values in the firebase database
+const conditionRef = ref(db, "condition")
+const contactRef = ref(db, "contact")
+const descriptionRef = ref(db, "description")
+// const imageRef = ref(db, "image") --> image will be different
+const listingNameRef = ref(db, "listingName")
+const locationRef = ref(db, "location")
+const typeRef = ref(db, "type")
 
 function ItemCard(props) {
   const imageMapping = {
