@@ -19,7 +19,7 @@ const About = () => {
       </div>
 
       {/* The Challenge Section */}
-      /* <div className="challenge-section">
+      <div className="challenge-section">
         <h2>The Challenge</h2>
         <p>
           Each year, a staggering amount of furniture ends up in landfills. Our mission is to tackle this waste, one piece of furniture at a time.
@@ -27,14 +27,14 @@ const About = () => {
       </div>
 
       {/*Our Solution Section */}
-      /* <div className="solution-section">
+      <div className="solution-section">
         <h2>Our Solution</h2>
         <ul>
           <li>A secure platform for university communities.</li>
           <li>Easy access to sustainable disposal options.</li>
           <li>A cost-free service that promotes furniture reuse.</li>
         </ul>
-    </div> */
+    </div>
 
       {/* Why FurnishU Section */}
       <div className="why-furnishu-section">
