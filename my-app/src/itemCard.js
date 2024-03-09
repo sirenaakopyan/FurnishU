@@ -58,7 +58,7 @@ function ItemCard(props) {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-
+  // come back to this code chunk
   const handleClaimClick = (event) => {
     event.stopPropagation();
     if (!isClaimed && user) {

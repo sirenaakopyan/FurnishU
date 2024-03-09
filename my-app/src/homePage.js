@@ -1,10 +1,83 @@
-import React, { useState, useEffect } from 'react';
-import { ItemList, Filter } from './itemCard.js';
 import Add_Post from './components/add-post.js';
-import { getDatabase, ref as dbRef, set as firebaseSet, get, child } from 'firebase/database'
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 // import { fetchListingsFromFirebase } from './firebase'; // Add the function to fetch data
+import { ItemList, ItemCard, Filter } from './itemCard.js';
+import  DynamicCard  from './dynamicCard.js';
+import React, { useState, useEffect } from 'react';
+import { getDatabase, ref, get } from 'firebase/database';
 
+const HomePage = () => {
+    const [cardData, setCardData] = useState([]);
+    const [filteredCards, setFilteredCards] = useState([]);
+    const [sortOption, setSortOption] = useState('name');
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+            const db = getDatabase();
+            const itemListRef = ref(db, 'listings');
+
+            try {
+                const snapshot = await get(itemListRef);
+                const itemData = [];
+
+                snapshot.forEach((childSnapshot) => {
+                    const item = childSnapshot.val();
+
+                    itemData.push({
+                        condition: item.condition,
+                        contact: item.contact,
+                        description: item.description,
+                        // image: item.image,
+                        name: item.listingName,
+                        location: item.location,
+                        type: item.type,
+                    });
+                  console.log(itemData);
+                  });
+                
+                setCardData(itemData);
+                setFilteredCards(itemData);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
+    return (
+        <div>
+            <div className="front-page-header">
+                <h1><b>All Articles</b></h1>
+            </div>
+            
+            <div className="article-display">
+                {filteredCards.length === 0 ? (
+                    <p id='no-results'>No results found.</p>
+                ) : (
+                    <>
+                        {filteredCards.map((card) => (
+                            <DynamicCard 
+                            condition={card.condition}
+                            contact = {card.contact}
+                            description = {card.description}
+                            // image = {card.image}
+                            name = {card.listingName}
+                            location = {card.location}
+                            type = {card.type}
+                            />
+                        ))}
+                    </>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export { HomePage };
+
+/*
 function ParentComponent(props) {
   const [filterValue, setFilterValue] = useState('');
 
@@ -20,22 +93,18 @@ function ParentComponent(props) {
 
   return (
     <div>
-      {/* ... other components */}
       <ItemList
         furni={props.furniData.condition}
         claim={props.claim} 
         onFilterChange={handleFilterChange}
         clearFilter={handleClearFilter}
       />
-      {/* ... other components */}
     </div>
   );
 }
-
 export default ParentComponent;
 
-function HomePage(props) {
-/*
+function HomePage(props) { 
   const HomePage = () => {
     const [listings, setListings] = useState([]);
   
@@ -56,7 +125,7 @@ function HomePage(props) {
     const addListing = (newListing) => {
       setListings((prevListings) => [...prevListings, newListing]);
     };
-*/
+
     return (
       <div>
         <main>
@@ -71,3 +140,4 @@ function HomePage(props) {
   }
 
 export { HomePage };
+*/
