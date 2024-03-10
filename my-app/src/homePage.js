@@ -45,20 +45,31 @@ const HomePage = () => {
         fetchData();
     }, []);
 
+    const applyFilter = (value) => {
+      if (value) {
+        setFilteredCards(cardData.filter((card) => card.condition.toLowerCase() === value.toLowerCase()));
+      } else {
+        setFilteredCards(cardData);
+      }
+    };
+  
 
     return (
         <div>
             <div className="front-page-header">
-                <h1><b>All Articles</b></h1>
+                <h1><b>Available Items</b></h1>
             </div>
-            
+
+            <Filter onFilterChange={applyFilter} clearFilter={() => applyFilter('')} />
+
             <div className="article-display">
                 {filteredCards.length === 0 ? (
                     <p id='no-results'>No results found.</p>
                 ) : (
                     <>
-                        {filteredCards.map((card) => (
+                        {filteredCards.map((card, index) => (
                             <DynamicCard 
+                            key={index}
                             condition={card.condition}
                             contact = {card.contact}
                             description = {card.description}
@@ -77,7 +88,6 @@ const HomePage = () => {
 
 export { HomePage };
 
-/*
 function ParentComponent(props) {
   const [filterValue, setFilterValue] = useState('');
 
@@ -103,41 +113,3 @@ function ParentComponent(props) {
   );
 }
 export default ParentComponent;
-
-function HomePage(props) { 
-  const HomePage = () => {
-    const [listings, setListings] = useState([]);
-  
-    // Fetch listings from Firebase on component mount
-    useEffect(() => {
-      const fetchListings = async () => {
-        try {
-          const firebaseListings = await fetchListingsFromFirebase();
-          setListings(firebaseListings);
-        } catch (error) {
-          console.error('Error fetching listings from Firebase:', error.message);
-        }
-      };
-  
-      fetchListings();
-    }, []); // Empty dependency array means this effect runs only once on mount
-  
-    const addListing = (newListing) => {
-      setListings((prevListings) => [...prevListings, newListing]);
-    };
-
-    return (
-      <div>
-        <main>
-          <div className='container'>
-            <div className='row'>
-            <ItemList furni={props.furni} claim={props.claim} ></ItemList> 
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-export { HomePage };
-*/
