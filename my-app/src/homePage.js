@@ -27,8 +27,8 @@ const HomePage = () => {
                         condition: item.condition,
                         contact: item.contact,
                         description: item.description,
-                        // image: item.image,
-                        name: item.listingName,
+                        image: item.image,
+                        listingName: item.listingName,
                         location: item.location,
                         type: item.type,
                     });
@@ -62,8 +62,8 @@ const HomePage = () => {
                             condition={card.condition}
                             contact = {card.contact}
                             description = {card.description}
-                            // image = {card.image}
-                            name = {card.listingName}
+                            image = {card.image}
+                            listingName = {card.listingName}
                             location = {card.location}
                             type = {card.type}
                             />
