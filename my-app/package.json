@@ -19,6 +19,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "react/jsx-pascal-case": "off"
+    },
     "extends": [
       "react-app",
       "react-app/jest"
