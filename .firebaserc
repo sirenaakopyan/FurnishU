@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "info-442-e7337"
-  }
+    "default": "info-442-e7337",
+    "build": "info-442-e7337"
+  },
+  "targets": {},
+  "etags": {}
 }

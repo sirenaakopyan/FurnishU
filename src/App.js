@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Signup from './components/Signup';
-import Logout from './components/Logout'; 
+import Navbar from './components/Navbar.js';
+import About from './components/About.js';
+import Signup from './components/Signup.jsx';
+import Logout from './components/Logout.jsx'; 
 import Add_Post from './components/add-post.js';
-import LandingPage from './components/LandingPage';
-import { Footer } from './footer';
+import LandingPage from './components/LandingPage.jsx';
+import { Footer } from './footer.js';
 import { HomePage } from './homePage.js';
 import SAMPLE_Furni from './data/furnData.json'; 
 
