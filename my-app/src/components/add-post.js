@@ -136,7 +136,7 @@ const Add_Post = () => {
             <option value="Decor">Decor</option>
             <option value="Furniture">Furniture</option>
             <option value="Technology">Technology</option>
-            <option value="Paraphernalia">Paraphernalia</option>
+            <option value="Paraphernalia">Miscellaneous</option>
             {/* Add more categories as needed */}
           </select>
         </div>
