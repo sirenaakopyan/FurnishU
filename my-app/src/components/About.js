@@ -60,17 +60,16 @@ const About = () => {
       </div>
 
       {/* Impact Infographic Section */}
-      <div className="impact-infographic-section">
-      <h2>Why is recylcing furniture important?</h2>
+      <div className="impact-video-section" aria-label="informational video regarding the environmental impacts of furniture waste and how re-using furniture is a great solution">
+      <h2>Why is recycling furniture important?</h2>
         <video controls>
           <source src={videographic} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
 
       {/* Call to Action Section */}
        <div className="cta-section">
-        <h2>Join Our Effort</h2>
+        <h2>Join Our Sustainability Effort</h2>
         <a href="https://www.unep.org/explore-topics/sustainable-development-goals/why-do-sustainable-development-goals-matter/goal-12">
     <button>Start Sharing</button>
   </a>

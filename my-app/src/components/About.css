@@ -9,7 +9,7 @@
     padding: 100px;
     text-align: center;
   }
-  .impact-infographic-section img {
+  .impact-video-section img {
     max-width: 100%; /* Ensures the image is responsive and fits its container */
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Ensures the image does not inline */
@@ -20,7 +20,7 @@
   .challenge-section,
   .solution-section,
   .why-furnishu-section,
-  .impact-infographic-section,
+  .impact-video-section,
   .cta-section {
     padding: 50px;
     text-align: center;
@@ -31,7 +31,7 @@
   .solution-section h2,
   .why-furnishu-section h2 {
     margin-bottom: 20px;
-    color: rgb(91, 87, 68) 73, 73);
+    color: rgb(91, 87, 68);
   }
   
   .solution-section ul {
@@ -49,7 +49,7 @@
     width: 25%;
   }
   
-  .impact-infographic-section img {
+  .impact-video-section img {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
